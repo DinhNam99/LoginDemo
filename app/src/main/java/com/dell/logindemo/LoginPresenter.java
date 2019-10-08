@@ -1,16 +1,14 @@
 package com.dell.logindemo;
 
-import android.util.Log;
+public class LoginPresenter implements LoginPresenterInterface{
+    LoginViewInterface loginInterface;
 
-public class LoginPresenter {
-    LoginInterface loginInterface;
-
-    public LoginPresenter(LoginInterface loginInterface){
+    public LoginPresenter(LoginViewInterface loginInterface){
         this.loginInterface = loginInterface;
     }
 
-
-    public void login(String un, String pw){
+    @Override
+    public void login(String un, String pw) {
         if(un.equals("admin") && pw.equals("123")){
             loginInterface.loginSuccess("Login successfully!!!");
             return;

@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements LoginInterface {
+public class MainActivity extends AppCompatActivity implements LoginViewInterface {
 
     EditText edUS, edPW;
     Button btnLogin;
